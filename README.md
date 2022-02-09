@@ -35,3 +35,19 @@ Output:
 ```bash
 perl ./perl_scripts/filterOverhangAlignments.pl <input overhang PAF file> <the original full PAF file> <output file name>
 ```
+
+
+#### bac_end_characterization.sh
+
+Note: depends on the following scripts/programs being installed on your PATH and set to executable status:
+
+* https://github.com/njdbickhart/perl_toolchain/blob/master/bed_cnv_fig_table_pipeline/nameListVennCount.pl
+* https://github.com/njdbickhart/python_toolchain/blob/master/utils/tabFileColumnCounter.py
+* generate_pairs.pl (this repository)
+* https://github.com/lh3/minimap2
+
+```bash
+bash bac_end_characterization.sh <input forward BAC end fasta> <input reverse BAC end fasta> <Reference assembly fasta> <output prefix>
+```
+
+Output is a brief table named **(output_prefix).final.tab** that contains category counts for BAC end mappings.
